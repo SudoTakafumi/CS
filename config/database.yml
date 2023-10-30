@@ -22,7 +22,9 @@ test:
 
 production:
   <<: *default
-  
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: test_render_a4gh
   username: test_render_a4gh_user
   password: <%= ENV['MYSITE_DATABASE_PASSWORD'] %>
